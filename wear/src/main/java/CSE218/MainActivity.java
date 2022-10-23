@@ -2,6 +2,7 @@ package CSE218;
 
 
 import android.Manifest;
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.pm.PackageManager;
 import android.net.wifi.WifiManager;
@@ -30,9 +31,12 @@ public class MainActivity extends WearableActivity {
     private static final int ACTIVITY_RECOGNITION_REQUEST_CODE = 34;
     private WifiManager wifiManager;
     private HeartRateListener heartrateListener;
+    private StepCountListener stepCountListener;
     public TextView heartView;
+    public TextView stepView;
 
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,10 +45,15 @@ public class MainActivity extends WearableActivity {
         checkPermissions();
 
         this.heartView = (TextView) findViewById(R.id.text4);
+        this.stepView = (TextView) findViewById(R.id.text61);
         ImageButton ib = (ImageButton) findViewById(R.id.myButton);
         wifiManager = (WifiManager) this.getApplicationContext().getSystemService(Context.WIFI_SERVICE);
         heartrateListener = new HeartRateListener(this, this.heartView);
         heartrateListener.startSensor();
+
+        stepCountListener = new StepCountListener(this, this.stepView);
+        stepCountListener.startSensor();
+
 
         ib.setOnClickListener(new View.OnClickListener() {
             @Override
