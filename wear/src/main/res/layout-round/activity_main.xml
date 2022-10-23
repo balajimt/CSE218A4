@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context="CSE218.MainActivity"
+                tools:deviceIds="wear_round">
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/mybg">
+
+        <ImageButton
+            android:id="@+id/myButton"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:background="@null"
+            android:src="@drawable/ok" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/mainText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearLayout1"
+        android:layout_centerHorizontal="true"
+        android:text="Click to update" />
+
+    <TextView
+        android:id="@+id/mainText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearLayout1"
+        android:layout_centerHorizontal="true"
+        android:text="Wifi details"
+        android:translationY="-90dp" />
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="70dp"
+        android:layout_height="30dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="4dp"
+        android:text="Latitude"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:translationX="10dp"
+        android:translationY="80dp" />
+
+    <TextView
+        android:id="@+id/text4"
+        android:layout_width="70dp"
+        android:layout_height="30dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="4dp"
+        android:text="HeartRate"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:translationX="70dp"
+        android:translationY="150dp" />
+
+    <TextView
+        android:id="@+id/text5"
+        android:layout_width="70dp"
+        android:layout_height="30dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="4dp"
+        android:text="Altitude"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:translationX="70dp"
+        android:translationY="130dp" />
+
+    <TextView
+        android:id="@+id/text3"
+        android:layout_width="70dp"
+        android:layout_height="30dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="4dp"
+        android:text="Longitude"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:translationX="115dp"
+        android:translationY="80dp" />
+
+</RelativeLayout>
