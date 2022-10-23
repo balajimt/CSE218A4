@@ -13,7 +13,7 @@ The main functionality of the app is defined in `main/wear/src/main/java/CSE218/
 
 The heart rate listener is defined in `main/wear/src/main/java/CSE218/HeartRateListener.java`
 
-The heart rate listener is defined in `main/wear/src/main/java/CSE218/StepCountListener.java`
+The step count listener is defined in `main/wear/src/main/java/CSE218/StepCountListener.java`
 <br><br><br>
 
 <b>Output capture without steps</b><br><br>
