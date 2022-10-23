@@ -16,6 +16,11 @@ The heart rate listener is defined in `main/wear/src/main/java/CSE218/HeartRateL
 The step count listener is defined in `main/wear/src/main/java/CSE218/StepCountListener.java`
 <br><br><br>
 
+
+The step counter algorithm was largely inspired from [the MathWorks counting steps documentation](https://www.mathworks.com/help/matlabmobile/ug/counting-steps-by-capturing-acceleration-data.html). It is defined as follows:
+* First the gravity component is removed from the raw accelerometer data with a low pass filter which provides some smoothing.
+* Thereafter a z-scoretime series peak detection algorithm adapted from [StackOverflow](https://stackoverflow.com/questions/22583391/peak-signal-detection-in-realtime-timeseries-data). In summary, the raw z score is defined as `z = (x-m)/s` where m is the mean, s is the standard deviation and x is the input. The algorithm samples a certain number of inputs and maintains a average for the minimum number of sampled inputs. The mean and standard deviation gets updated for the next window and gets repeated for the next set of inputs. The peaks detected in the process are the steps detected among the inputs sampled.
+
 <b>Output capture without steps</b><br><br>
 ![output](output_images/output.gif)
 
